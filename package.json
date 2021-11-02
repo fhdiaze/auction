@@ -1,0 +1,30 @@
+{
+  "type": "module",
+  "name": "vickrey",
+  "version": "1.0.0",
+  "description": "vickrey auction api",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fhdiaze/vickrey.git"
+  },
+  "keywords": [
+    "auction",
+    "vickrey"
+  ],
+  "author": "Fredy Diaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fhdiaze/vickrey/issues"
+  },
+  "homepage": "https://github.com/fhdiaze/vickrey#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
