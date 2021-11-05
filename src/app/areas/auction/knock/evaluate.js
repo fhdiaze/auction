@@ -63,7 +63,7 @@ const selectWinner = (bidOne, bidTwo) => {
  */
 const selectPrice = (lot, winningBid, priceBid, challenger) => {
   if (domain.lot.isValidBid(challenger, lot)) {
-    if (!winningBid.bidder.equals(challenger.bidder)) {
+    if (!domain.bidder.equals(winningBid.bidder, challenger.bidder)) {
       ({ winner: priceBid, } = selectWinner(priceBid, challenger));
     }
   }

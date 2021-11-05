@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "f55dba38-6ebf-42bb-a698-3a8640d652c8",
+		"name": "auction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "shouldCreateAuction",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"auctionName\": \"Trek\",\r\n    \"lotName\": \"bike\",\r\n    \"lotReserve\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{apiUrl}}/auction.create",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"auction.create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shouldCreateBidder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{apiUrl}}/bidder.create",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"bidder.create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shouldAddBid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"auctionId\": \"Trek\",\r\n    \"bidderId\": \"Juan\",\r\n    \"offer\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{apiUrl}}/bid.add",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"bid.add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shouldKnockAuction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"auctionId\": \"Trek\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{apiUrl}}/auction.knock",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"auction.knock"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "serviceUrl",
+			"value": "{{apiUrl}}/bidder.create"
+		},
+		{
+			"key": "auctionId",
+			"value": ""
+		}
+	]
+}

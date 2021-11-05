@@ -1,3 +1,4 @@
 import lot from './lot';
+import bidder from './bidder';
 
-export default { lot };
+export default { lot, bidder };
